@@ -1,0 +1,14 @@
+.card {
+    padding: 0;
+    margin-bottom: 32px;
+    margin-right: 33px;
+    width:454px;
+    height: 281px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, .2);
+    display: flex;
+}
+
+.list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}

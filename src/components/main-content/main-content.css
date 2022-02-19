@@ -1,0 +1,8 @@
+.main-content{
+    margin: 0 auto;
+    max-width: 1010px;
+    background-color:#fff;
+    padding-top: 19px;
+    padding-left: 32px;
+    display: flex;
+}
