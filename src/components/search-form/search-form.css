@@ -1,0 +1,16 @@
+.search-input {
+    width: 938px;
+    height: 40px;
+    border: 1px solid #827E7E;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.search-form {
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    max-width: 1010px;
+    height: 80px;
+    background-color: white;
+}

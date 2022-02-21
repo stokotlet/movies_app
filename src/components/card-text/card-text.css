@@ -1,12 +1,5 @@
-.overview {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 22px;
-    font-style: normal;
-}
-
 .text-box {
-    padding: 12px 20px;
+    padding: 10px 20px;
 }
 
 .text-box .title {
@@ -15,6 +8,7 @@
     font-style: normal;
     font-weight: 400;
     padding-bottom: 7px;
+    width: 90%;
 }
 
 .text-box .release-date {
@@ -34,4 +28,29 @@
     margin-bottom: 7px;
     font-size: 12px;
     line-height: 15px;
+}
+
+.text-box .overview {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    font-style: normal;
+}
+
+.text-box .title-box {
+    position: relative;
+}
+
+.text-box .title-box .rating {
+    position: absolute;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: -10px;
+    border: 2px solid #E9D100;
+    border-radius: 50px;
+    font-size: 12px;
+    line-height: 27px;
+    text-align: center;
 }

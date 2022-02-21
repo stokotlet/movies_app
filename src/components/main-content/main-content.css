@@ -1,8 +1,13 @@
 .main-content{
     margin: 0 auto;
-    max-width: 1010px;
+    width: 1010px;
+    min-height: 500px;
     background-color:#fff;
     padding-top: 19px;
     padding-left: 32px;
+}
+
+.paginator {
     display: flex;
+    justify-content: center;
 }

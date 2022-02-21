@@ -13,7 +13,12 @@ export default class CardList extends React.Component {
       return (
         <div className="card" key={movie.id}>
           <CardImage imageUrl={movie.poster_path} />
-          <CardText title={movie.title} date={movie.release_date} overview={movie.overview} />
+          <CardText
+            title={movie.title}
+            date={movie.release_date}
+            overview={movie.overview}
+            rating={movie.vote_average}
+          />
         </div>
       );
     });
