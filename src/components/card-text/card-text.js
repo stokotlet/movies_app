@@ -1,4 +1,5 @@
 import React from 'react';
+import { Rate } from 'antd';
 import './card-text.css';
 
 const CardText = ({ title, date, overview, rating }) => {
@@ -8,7 +9,17 @@ const CardText = ({ title, date, overview, rating }) => {
       return newStr + ' ...';
     } else return str;
   }
-  let truncOverview = truncate(overview, 210);
+
+  const handleChange = (v) => {
+    console.log(v);
+  };
+  let truncOverview;
+  if (title.length < 20) {
+    truncOverview = truncate(overview, 210);
+  } else {
+    truncOverview = truncate(overview, 150);
+  }
+
   date = new Date(date);
   let options = {
     year: 'numeric',
@@ -26,6 +37,9 @@ const CardText = ({ title, date, overview, rating }) => {
       <div className="release-date">{date}</div>
       <div className="genres">Action</div>
       <div className="overview">{truncOverview}</div>
+      <div className="set-rating">
+        <Rate allowHalf defaultValue={0} onChange={handleChange} count={10} style={{ fontSize: 16 }} />
+      </div>
     </div>
   );
 };

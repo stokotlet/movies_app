@@ -1,5 +1,6 @@
 .text-box {
     padding: 10px 20px;
+    position: relative;
 }
 
 .text-box .title {
@@ -53,4 +54,9 @@
     font-size: 12px;
     line-height: 27px;
     text-align: center;
+}
+
+.set-rating {
+    position: absolute;
+    bottom: 10px;
 }
