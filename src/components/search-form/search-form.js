@@ -7,7 +7,7 @@ const SearchForm = ({ onSearchMovies }) => {
     onSearchMovies(e.target.value);
   }, 500);
 
-  return <input className="search-input" onChange={searchHandler} type="text" placeholder="Type to search" />;
+  return <input className="search-input" onChange={searchHandler} type="text" placeholder="Type to search..." />;
 };
 
 export default SearchForm;

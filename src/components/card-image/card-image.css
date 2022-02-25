@@ -1,6 +1,18 @@
 .image {
-    width: 183px;
-    height: 281px;
+    width: 60px;
+    height: 91px;
     padding: 0;
     margin: 0;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+
+}
+
+@media (min-width: 1121px) {
+    .image{
+        width: 183px;
+        height: 281px;
+        position: static;
+    }
 }

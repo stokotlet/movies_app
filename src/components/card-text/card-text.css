@@ -9,7 +9,8 @@
     font-style: normal;
     font-weight: 400;
     padding-bottom: 7px;
-    width: 90%;
+    margin-left: 65px;
+    width: 70%;
 }
 
 .text-box .release-date {
@@ -17,18 +18,7 @@
     line-height: 22px;
     color: #827E7E;
     padding-bottom: 7px;
-}
-
-.text-box .genres{
-    border: 1px solid #827E7E;
-    color: #827E7E;
-    padding: 1px;
-    text-align: center;
-    width: auto;
-    border-radius: 1px;
-    margin-bottom: 7px;
-    font-size: 12px;
-    line-height: 15px;
+    margin-left: 65px;
 }
 
 .text-box .overview {
@@ -36,6 +26,9 @@
     font-weight: 400;
     line-height: 22px;
     font-style: normal;
+    width: 367px;
+    position: relative;
+    left: -10px;
 }
 
 .text-box .title-box {
@@ -48,8 +41,7 @@
     width: 30px;
     height: 30px;
     top: 0;
-    right: -10px;
-    border: 2px solid #E9D100;
+    right: 10px;
     border-radius: 50px;
     font-size: 12px;
     line-height: 27px;
@@ -59,4 +51,44 @@
 .set-rating {
     position: absolute;
     bottom: 10px;
+    right: 30px;
+}
+
+.rating-color1 {
+    border: 2px solid #E90000;;
+}
+
+.rating-color2 {
+    border: 2px solid #E97E00;
+}
+
+.rating-color3 {
+    border: 2px solid #E9D100;
+}
+
+.rating-color4 {
+    border: 2px solid #66E900;
+}
+
+@media (min-width: 1121px) {
+    .text-box .overview{
+        width: 230px;
+        left: 0;
+    }
+    .text-box .release-date{
+        margin: 0
+    }
+    .text-box .title {
+        margin: 0;
+        width: 90%;
+    }
+    .text-box .title-box .rating {
+        right: -10px;
+    }
+
+    .set-rating {
+        bottom: 10px;
+        left: 15px;
+        right: 0;
+    }
 }

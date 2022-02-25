@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'antd/dist/antd.min.css';
 
-import CardText from '../card-text/card-text';
+import RatedCardText from '../rated-card-text/rated-card-text';
 import CardImage from '../card-image/card-image';
 
 export default class CardList extends React.Component {
@@ -12,15 +12,21 @@ export default class CardList extends React.Component {
       return (
         <div className="card" key={movie.id}>
           <CardImage imageUrl={movie.poster_path} />
-          <CardText
+          <RatedCardText
             title={movie.title}
             date={movie.release_date}
             overview={movie.overview}
             rating={movie.vote_average}
+            userRating={movie.rating}
+            genreIds={movie.genre_ids}
           />
         </div>
       );
     });
-    return <div className="list-wrapper">{movieList}</div>;
+    return (
+      <main className="main-content">
+        <div className="list-wrapper">{movieList}</div>
+      </main>
+    );
   }
 }

@@ -1,4 +1,17 @@
 .tabs-wrapper {
     background-color: white;
-    border: none;
+    margin: 0 auto;
+    width: 420px;
+}
+.spin{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+}
+
+@media (min-width: 1121px) {
+    .tabs-wrapper{
+        width: 1010px;
+    }
 }

@@ -1,12 +1,11 @@
 import React from 'react';
+import '../card-text/card-text.css';
+import { Rate } from 'antd';
 
 import { Consumer } from '../genres-context/genres-context';
-import SetRating from '../set-rating/set-rating';
-import './card-text.css';
 import Genres from '../genres/genres';
-// import genres from '../genres/genres';
 
-const CardText = ({ title, date, overview, rating, movieId, guestId, isRated, genreIds }) => {
+const RatedCardText = ({ title, date, overview, rating, userRating, genreIds }) => {
   function truncate(str, n) {
     if (str.length > n) {
       let newStr = str.slice(0, n).split(' ').slice(0, -1).join(' ');
@@ -20,6 +19,7 @@ const CardText = ({ title, date, overview, rating, movieId, guestId, isRated, ge
   } else {
     truncOverview = truncate(overview, 150);
   }
+
   date = new Date(date);
   let options = {
     year: 'numeric',
@@ -51,9 +51,11 @@ const CardText = ({ title, date, overview, rating, movieId, guestId, isRated, ge
         }}
       </Consumer>
       <div className="overview">{truncOverview}</div>
-      <SetRating movieId={movieId} guestId={guestId} isRated={isRated} />
+      <div className="set-rating">
+        <Rate allowHalf disabled defaultValue={userRating} count={10} style={{ fontSize: 16 }} />
+      </div>
     </div>
   );
 };
 
-export default CardText;
+export default RatedCardText;
