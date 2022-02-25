@@ -9,7 +9,7 @@ import CardImage from '../card-image/card-image';
 
 export default class CardList extends React.Component {
   render() {
-    const { movies, guestId, isRated, currentPage, onChange } = this.props;
+    const { movies, guestId, isRated, currentPage, onChange, totalPages } = this.props;
     const movieList = movies.map((movie) => {
       return (
         <div className="card" key={movie.id}>
@@ -31,7 +31,7 @@ export default class CardList extends React.Component {
       <main className="main-content">
         <div className="list-wrapper">{movieList}</div>
         <div className="paginator">
-          <Pagination size="small" current={currentPage} onChange={onChange} total={50} />
+          <Pagination size="small" current={currentPage} onChange={onChange} total={totalPages} />
         </div>
       </main>
     );

@@ -18,8 +18,9 @@ export default class App extends React.Component {
     loading: true,
     error: false,
     errorMessage: '',
-    query: 'return',
+    query: 'way',
     paginatorPage: 1,
+    totalPages: 0,
     nothingFound: false,
     guestId: '',
     newRated: false,
@@ -79,6 +80,7 @@ export default class App extends React.Component {
       .then((response) => {
         this.setState({
           movies: response.results,
+          totalPages: response.total_pages,
           loading: false,
           nothingFound: false,
         });
@@ -127,6 +129,7 @@ export default class App extends React.Component {
             this.setState({
               nothingFound: false,
               movies: response.results,
+              totalPages: response.total_pages,
               loading: false,
               paginatorPage: 1,
             });
@@ -191,6 +194,7 @@ export default class App extends React.Component {
           onChange={this.onChange}
           guestId={this.state.guestId}
           isRated={this.isRated}
+          totalPages={this.state.totalPages}
         />
       );
 
